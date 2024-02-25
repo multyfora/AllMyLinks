@@ -24,17 +24,7 @@ theme.addEventListener("click", () =>{
   }
 })
 
-// background: #D2DBEE;
-// border-radius: 100%;
-// box-shadow: inset 9.91px 9.91px 15px #BFC7D9, inset -9.91px -9.91px 15px #E5EFFF;
 
-// window.onload = () => {
-//   document.body.classList.add("dark");
-//   document.documentElement.style.setProperty("--clr-primary-matte-black", "#D2DBEE");
-//   document.documentElement.style.setProperty("--clr-complementary-matte-black-highlight", "#E5EFFF");
-//   document.documentElement.style.setProperty("--clr-complementary-matte-black-shadow", "#BFC7D9");
-//   document.documentElement.style.setProperty("--main-text-color", "#EC80CE");
-// };
 
 togglerWeb.addEventListener("click", () => {
   setTimeout(() => {

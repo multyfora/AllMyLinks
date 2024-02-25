@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   color: var(--main-text-color);
+  transition: background-color 400ms, color 400ms;
 }
 
 :root {

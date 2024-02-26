@@ -122,6 +122,31 @@ h1 {
   background: ();
 }
 
+#toggler-web::before,
+#toggler-social::before {
+  content: "";
+  position: absolute;
+  font-size: 42px;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  height: 14px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--main-text-color);
+  box-shadow: 0 0 3px var(--main-text-color), 0 0 5px var(--main-text-color), 0 0 10px var(--main-text-color);
+  color: var(--main-text-color);
+  transition: background 500ms, box-shadow 500ms;
+}
+
+#toggler-web:active::before,
+#toggler-social:active::before{
+  --modded-color: color-mix(in srgb, var(--main-text-color) 70%, black);
+  background: var(--modded-color);
+  box-shadow: 0 0 3px var(--modded-color), 0 0 5px var(--modded-color), 0 0 0px var(--modded-color);
+}
+
+
 .animate-down {
   animation: go-down 200ms normal;
   margin-top: 0;
@@ -189,14 +214,14 @@ h1 {
     0 0 0 var(--clr-complementary-matte-black-highlight),
     inset 12.31px 12.31px 23px var(--clr-complementary-matte-black-shadow),
     inset -12.31px -12.31px 23px var(--clr-complementary-matte-black-highlight) !important;
-    & #sunmoon{
-      filter: brightness(.75);
-    }
+  & #sunmoon {
+    filter: brightness(0.75);
+  }
 }
 
 #sunmoon {
   width: 100%;
-   transition: filter 200ms;
+  transition: filter 200ms;
 }
 
 #center,

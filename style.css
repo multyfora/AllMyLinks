@@ -4,6 +4,7 @@
   box-sizing: border-box;
   color: var(--main-text-color);
   transition: background-color 400ms, color 400ms;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 :root {

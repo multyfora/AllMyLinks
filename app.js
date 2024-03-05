@@ -1,7 +1,6 @@
 const togglerWeb = document.querySelector("#toggler-web");
-const togglerSocial = document.querySelector("#toggler-social");
 const linksWeb = document.querySelectorAll(".link.togglable.website");
-const linksSocial = document.querySelectorAll(".link.togglable.social");
+const socials = document.querySelector(".socials");
 const theme = document.querySelector(".sun-container");
 
 
@@ -32,14 +31,9 @@ togglerWeb.addEventListener("click", () => {
     showLinks(linksWeb);
   }, 200);
   //toggler animation
-  togglerSocial.classList.remove("animate-up");
-  togglerSocial.classList.toggle("animate-down");
+  socials.classList.remove("animate-up");
+  socials.classList.toggle("animate-down");
 
-});
-
-togglerSocial.addEventListener("click", () => {
-  console.log("clicked social toggler");
-  showLinks(linksSocial);
 });
 
 function showLinks(links) {
@@ -50,7 +44,7 @@ function showLinks(links) {
       links[i].classList.remove("shown");
       setTimeout(() => {
         links[i].style.display = "";
-        if(links == linksWeb) togglerSocial.classList.add("animate-up");
+        if(links == linksWeb) socials.classList.add("animate-up");
       }, 500);
     } else {
       console.log("else condition");

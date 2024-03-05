@@ -121,6 +121,56 @@ h1 {
   }
 }
 
+.button-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50vw;
+  box-shadow: 12.31px 12.31px 23px var(--clr-complementary-matte-black-shadow),
+  -12.31px -12.31px 23px var(--clr-complementary-matte-black-highlight);
+  width: 75px;
+  aspect-ratio: 1;
+  transition: box-shadow 500ms, color 500ms;
+}
+
+.button-link > svg {
+  transition: filter 200ms, fill 500ms;
+}
+
+.button-link:hover > svg {
+  filter: drop-shadow(0 0 3px var(--main-text-color));
+}
+
+.button-link:active {
+  box-shadow: 0 0 0 var(--clr-complementary-matte-black-shadow),
+    0 0 0 var(--clr-complementary-matte-black-highlight),
+    inset 12.31px 12.31px 23px var(--clr-complementary-matte-black-shadow),
+    inset -12.31px -12.31px 23px var(--clr-complementary-matte-black-highlight) !important;
+  transition: box-shadow 200ms, color 200ms;
+}
+
+.button-link:active > svg{
+    filter: drop-shadow(
+      0 0 0px color-mix(in srgb, var(--main-text-color) 60%, transparent)
+    );
+}
+
+.button-link:active .button-link-inside{
+  fill: color-mix(in srgb, var(--main-text-color) 70%, black);
+}
+
+.button-link-inside {
+  fill: var(--main-text-color);
+  transition: filter 200ms, fill 500ms;
+}
+
+.socials{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
 #toggler-web,
 #toggler-social {
   display: block;

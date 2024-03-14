@@ -79,7 +79,7 @@ h1 {
   color: transparent;
   -webkit-user-select: none;
   user-select: none;
-  transition: box-shadow 500ms, color 500ms;
+  transition: box-shadow 500ms, color 500ms, background-color 500ms;
   display: none;
   & p {
     filter: drop-shadow(
